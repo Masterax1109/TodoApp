@@ -22,8 +22,8 @@ const path = require('path');
     try {
         //conexion a la base de datos
         await mongoose.connect(process.env.MONGO_URI_TEST);
-        console.log("conectado a mongo db")
-
+            console.log("conectado a mongo db")
+        
 
     } catch (error) {
         console.log("error de conexion a mongo db", error)
@@ -33,7 +33,7 @@ const path = require('path');
 
 module.exports = app;
 
-//RUTAS FRONTEND
-app.use('/', express.static(path.resolve('views', "home"))); //ruta del home
-app.use('/components', express.static(path.resolve('views', "components")));
+    //RUTAS FRONTEND
+    app.use('/', express.static(path.resolve('views', "home"))); //ruta del home
+    
 
