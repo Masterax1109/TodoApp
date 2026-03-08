@@ -5,7 +5,8 @@ const { response } = require('../app');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken')
 
-loginRouterRouter.post('/', async (request,response) => {
+
+loginRouter.post('/', async (request,response) => {
     const {email, password} = request.body;
     //COMPRUEBA USUARIO EN LA BASE DE DATOS
     const userExist = UserActivation.findOne({email})

@@ -36,8 +36,10 @@ module.exports = app;
 
     //RUTAS FRONTEND
     app.use('/', express.static(path.resolve('views', "home"))); //ruta del home
+    app.use('/login', express.static(path.resolve('views', 'login'))); //ruta del login
+    app.use('/components', express.static(path.resolve('views', 'components')));
 
     //RUTAS BACKEND
-    app.use('/api/login', loginRouter);
-    
+    app.use('/api/login', loginRouter);    
 
+    module.exports = app;
